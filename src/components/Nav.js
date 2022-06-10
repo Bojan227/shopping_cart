@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom"
+import cart from '../images/cart.png'
 
 export default function Nav(){
 
@@ -14,6 +15,10 @@ export default function Nav(){
                 <Link to='/shop'>
                     <li>Shop</li>
                 </Link>
+
+                
+                 <img src={cart} alt='cart' />
+               
             </ul>
 
         </nav>
