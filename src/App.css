@@ -73,8 +73,25 @@ div.shoes-section > :nth-child(3) {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .card > img {
-  width: 200px;
+  width: 250px;
   height: 250px;
+}
+.card > * {
+  margin: 5px 0px;
+}
+.card > button {
+  width: 100%;
+}
+
+.cards-section {
+  display: grid;
+  min-height: 100vh;
+  justify-items: center;
+  align-items: center;
+  padding: 30px;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  background: linear-gradient(to bottom, #6d6027, #d3cbb8);
 }
 .cart-container {
   position: fixed;
@@ -94,7 +111,7 @@ div.shoes-section > :nth-child(3) {
   padding: 45px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
 }
 .header-bag {
   display: flex;
@@ -105,8 +122,20 @@ div.shoes-section > :nth-child(3) {
   flex-direction: column;
   gap: 15px;
 }
-.products,
-.add--more {
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.product {
   display: flex;
   gap: 30px;
+  align-items: center;
+}
+.add--more {
+  display: flex;
+  gap: 15px;
+}
+.add--more > button {
+  width: 20%;
 }
