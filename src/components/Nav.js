@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom"
 import cart from '../images/cart.png'
 
-export default function Nav(){
+export default function Nav(props){
 
     return (
 
@@ -16,8 +16,7 @@ export default function Nav(){
                     <li>Shop</li>
                 </Link>
 
-                
-                 <img src={cart} alt='cart' />
+                <img src={cart} alt='cart' onClick={props.toggleCart} />
                
             </ul>
 

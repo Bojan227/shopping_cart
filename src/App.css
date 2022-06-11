@@ -7,6 +7,9 @@
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
 }
+body {
+  position: relative;
+}
 
 nav {
   background: linear-gradient(to right, #283048, #859398);
@@ -68,4 +71,42 @@ div.shoes-section > :nth-child(3) {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.card > img {
+  width: 200px;
+  height: 250px;
+}
+.cart-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: hsl(0 0% 1% / 0.4);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart {
+  background-color: hsl(0 0% 100% / 0.7);
+  backdrop-filter: blur(1rem);
+  width: 30%;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.header-bag {
+  display: flex;
+  justify-content: space-between;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.products,
+.add--more {
+  display: flex;
+  gap: 30px;
 }
