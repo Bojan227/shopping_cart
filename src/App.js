@@ -39,7 +39,8 @@ function addToBag(id){
  
   setBagItems(prevState=>{
     let findItem = cards.find(card=> card.id === id)
-    return [...prevState, findItem]
+    let alreadyInTheBag = bagItems.find(item=>item.id === findItem.id)
+    return alreadyInTheBag ? [...prevState] : [...prevState, findItem]
   })
 }
 
@@ -53,7 +54,7 @@ function addToBag(id){
   return (
     <div className="App">
       <BrowserRouter>
-        <Nav toggleCart={toggleCart} />
+        <Nav toggleCart={toggleCart} bagItems={bagItems} />
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/shop' element={<Shop cards={cards} addToBag={addToBag} />}></Route>

@@ -17,7 +17,7 @@ export default function Nav(props){
                 </Link>
 
                 <img src={cart} alt='cart' onClick={props.toggleCart} />
-               
+                {props.bagItems.length > 0 && <div className='bag-length'>{props.bagItems.length}</div>}
             </ul>
 
         </nav>

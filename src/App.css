@@ -23,9 +23,19 @@ ul {
   align-items: center;
   gap: 20px;
   padding: 30px;
+  position: relative;
 }
 ul > * {
   cursor: pointer;
+}
+.bag-length {
+  position: absolute;
+  right: 14%;
+  border-radius: 30px;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
 }
 
 li {
