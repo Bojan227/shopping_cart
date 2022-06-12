@@ -14,7 +14,6 @@ function App() {
   const [bagItems, setBagItems] = React.useState([])
   const [cards, setCards] = React.useState([])
 
-  console.log(bagItems)
 React.useEffect(()=>{
   let randomNum = Math.floor(Math.random() * 84)
 

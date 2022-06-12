@@ -91,6 +91,14 @@ div.shoes-section > :nth-child(3) {
 }
 .card > button {
   width: 100%;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0;
+}
+.card > button:hover {
+  background-color: inherit;
+  border: 1px solid black;
 }
 
 .cards-section {
@@ -121,11 +129,19 @@ div.shoes-section > :nth-child(3) {
   padding: 45px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 40px;
 }
 .header-bag {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 35px;
+}
+.header-bag > button {
+  background-color: inherit;
+  border: 0;
+  font-size: 2rem;
+  cursor: pointer;
 }
 .product-info {
   display: flex;
@@ -142,10 +158,24 @@ div.shoes-section > :nth-child(3) {
   gap: 30px;
   align-items: center;
 }
+.order-btn > button {
+  width: 100%;
+  padding: 20px 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0;
+  margin-top: 20px;
+}
+.order-btn > button:hover {
+  background-color: inherit;
+  border: 2px solid black;
+}
 .add--more {
   display: flex;
   gap: 15px;
 }
 .add--more > button {
   width: 20%;
+  border-radius: 5px;
+  border: 0;
 }

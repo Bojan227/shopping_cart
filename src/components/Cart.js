@@ -1,6 +1,9 @@
 import React from 'react';
 
 export default function Cart(props){
+    const totalAmount = props.bagItems
+    .map(item=>item.price * item.quantity)
+    .reduce((curr, prev)=>curr + prev, 0)
 
     const allItems = props.bagItems.map(item=>{
 
@@ -30,6 +33,7 @@ export default function Cart(props){
     return (
         <div className={`cart-container ${props.visible}`}>
         <div className='cart'>
+            <div>
             <div className='header-bag'>
                 <h1>Shopping Bag</h1>
                 <button onClick={props.toggleCart} className='back--btn'>X</button>
@@ -37,9 +41,13 @@ export default function Cart(props){
             <div className='products'>
                 {allItems.length === 0 ? <h4>Your bag is empty</h4> : allItems}
             </div>
-
-
+            </div>
+            <div className='order-btn'>
+                <h1>Total: ${totalAmount}</h1>
+                <button>Make Order</button>
+            </div> 
         </div>
+        
         </div>
     )
 
