@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Cart(props){
 
-    const allItems = props.cartItems.map(item=>{
+    const allItems = props.bagItems.map(item=>{
 
         return (
             <div className='product' key={item.id}>
@@ -15,11 +15,11 @@ export default function Cart(props){
                 <div className='product-info'>
                     <h3>{item.name}</h3>
                     <div className='add--more'>
-                        <button>-</button>
-                        <h3>1</h3>
-                        <button>+</button>    
+                        <button onClick={()=>props.decrementQuantity(item.id)}>-</button>
+                        <h3>{item.quantity}</h3>
+                        <button onClick={()=>props.incrementQuantity(item.id)}>+</button>    
                     </div>
-                    <h3 className='price'>{item.price}</h3>
+                    <h3 className='price'>$ {item.price * item.quantity}</h3>
                 </div>
 
             </div>

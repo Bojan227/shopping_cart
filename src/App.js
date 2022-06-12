@@ -25,7 +25,8 @@ React.useEffect(()=>{
       return {
         name: drink.strDrink,
         src: drink.strDrinkThumb,
-        price: `$${Math.floor(Math.random() * 84) + 16}`,
+        price: Math.floor(Math.random() * 84) + 10,
+        quantity: 1,
         id: nanoid()
       }
     })
@@ -35,8 +36,39 @@ React.useEffect(()=>{
 
 }, [])
 
+function incrementQuantity(id){
+  setBagItems(prevItems=>{
+    return prevItems.map(item=>{
+      if(item.id === id){
+        return {
+          ...item,
+          quantity: item.quantity + 1,
+          
+        }
+      }else{
+        return item
+      }
+    })
+  })
+}
+
+function decrementQuantity(id){
+  setBagItems(prevItems=>{
+    return prevItems.map(item=>{
+      if(item.id === id){
+        return {
+          ...item,
+          quantity: item.quantity - 1,
+          
+        }
+      }else{
+        return item
+      }
+    }).filter(item=>item.quantity !== 0)
+  })
+}
+
 function addToBag(id){
- 
   setBagItems(prevState=>{
     let findItem = cards.find(card=> card.id === id)
     let alreadyInTheBag = bagItems.find(item=>item.id === findItem.id)
@@ -62,7 +94,13 @@ function addToBag(id){
         </Routes>
       </BrowserRouter>  
 
-      {openCart && <Cart visible={"visible"} toggleCart={toggleCart} cartItems={bagItems} />}
+      {openCart && <Cart
+       visible={"visible"} 
+       toggleCart={toggleCart}
+       bagItems={bagItems} 
+       incrementQuantity={incrementQuantity}
+       decrementQuantity={decrementQuantity}
+        />}
     </div>
   );
 }
