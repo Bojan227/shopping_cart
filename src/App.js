@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
 import { nanoid } from 'nanoid';
+import ProductInfo from './components/ProductInfo';
 
 function App() {
 
@@ -88,7 +89,8 @@ function addToBag(id){
         <Nav toggleCart={toggleCart} bagItems={bagItems} />
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/shop' element={<Shop cards={cards} addToBag={addToBag} />}></Route>
+          <Route path='/shop' element={<Shop cards={cards} addToBag={addToBag} />} />
+          <Route path='/shop/:id' element={<ProductInfo cards={cards} addToBag={addToBag} />} />
 
         </Routes>
       </BrowserRouter>  
@@ -99,6 +101,7 @@ function addToBag(id){
        bagItems={bagItems} 
        incrementQuantity={incrementQuantity}
        decrementQuantity={decrementQuantity}
+       
         />}
     </div>
   );

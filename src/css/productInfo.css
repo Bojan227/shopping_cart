@@ -1,0 +1,35 @@
+.product--info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #a8a29e;
+}
+.product--info > h1 {
+  margin-left: 30px;
+}
+.product--info > img {
+  width: 550px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+.buy-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+  width: 20%;
+  background-color: #e4e4e7;
+  min-height: 100vh;
+  text-align: center;
+}
+.buy-section > button {
+  background-color: #78716c;
+  padding: 15px 25px;
+  color: whitesmoke;
+  border: 0;
+  cursor: pointer;
+}
+.buy-section > button:hover {
+}

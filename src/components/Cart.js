@@ -18,9 +18,9 @@ export default function Cart(props){
                 <div className='product-info'>
                     <h3>{item.name}</h3>
                     <div className='add--more'>
-                        <button onClick={()=>props.decrementQuantity(item.id)}>-</button>
-                        <h3>{item.quantity}</h3>
-                        <button onClick={()=>props.incrementQuantity(item.id)}>+</button>    
+                        <button  onClick={()=>props.decrementQuantity(item.id)}>-</button>
+                        <h3 >{item.quantity}</h3>
+                        <button  onClick={()=>props.incrementQuantity(item.id)}>+</button>    
                     </div>
                     <h3 className='price'>$ {item.price * item.quantity}</h3>
                 </div>

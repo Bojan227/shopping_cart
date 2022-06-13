@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Nav bar if Nav section renders correctly 1`] = `<Nav />`;

@@ -52,19 +52,19 @@ li {
   min-height: 100vh;
   background: linear-gradient(to bottom, #007991, #78ffd6);
 }
-.shoes-section {
+.cocktail-section {
   display: flex;
   gap: 105px;
   padding: 55px;
 }
-.shoes-section > img {
+.cocktail-section > img {
   width: 350px;
 }
 
-div.shoes-section > :nth-child(1) {
+div.cocktail-section > :nth-child(1) {
   transform: rotate(-10deg);
 }
-div.shoes-section > :nth-child(3) {
+div.cocktail-section > :nth-child(3) {
   transform: rotate(10deg);
 }
 .info-section {
@@ -82,7 +82,7 @@ div.shoes-section > :nth-child(3) {
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.card > img {
+.card > a > img {
   width: 250px;
   height: 250px;
 }
@@ -175,7 +175,8 @@ div.shoes-section > :nth-child(3) {
   gap: 15px;
 }
 .add--more > button {
-  width: 20%;
   border-radius: 5px;
   border: 0;
+  cursor: pointer;
+  padding: 5px 10px;
 }

@@ -7,9 +7,10 @@ export default function Shop(props){
     const allCards = props.cards.map(card=>{
         return <Card
         key={card.id}
-         src={card.src}
+        src={card.src}
         name={card.name}
         price={card.price}
+        id={card.id}
         addToBag={()=>props.addToBag(card.id)}  />
     })
 
