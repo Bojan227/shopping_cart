@@ -86,6 +86,7 @@ div.cocktail-section > :nth-child(3) {
   width: 250px;
   height: 250px;
 }
+
 .card > * {
   margin: 5px 0px;
 }
@@ -112,16 +113,25 @@ div.cocktail-section > :nth-child(3) {
   background: linear-gradient(to bottom, #6d6027, #d3cbb8);
 }
 .cart-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   background-color: hsl(0 0% 1% / 0.4);
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-
+.cart-container-ani {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: hsl(0 0% 1% / 0.4);
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 .cart {
   background-color: hsl(0 0% 100% / 0.7);
   backdrop-filter: blur(1rem);
