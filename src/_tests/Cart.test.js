@@ -8,7 +8,7 @@ import Nav from '../components/Nav'
 
 describe('testing shopping bag section', ()=>{
 
-    it('if quantity goes up', async()=>{
+    it('if quantity goes up', ()=>{
         const onClickMock = jest.fn()
         const bagItemsMock = [{
             name: 'Mochito',
@@ -35,7 +35,7 @@ describe('testing shopping bag section', ()=>{
         const incrementBtn =  screen.getByTestId('increment')
         userEvent.click(incrementBtn)
           
-       await waitFor(()=>expect(screen.getByTestId('quantity').textContent).toMatch('2'))
+        waitFor(()=>expect(screen.getByTestId('quantity').textContent).toMatch('2'))
 
     })
 
