@@ -3,13 +3,17 @@ import { screen, render, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom"; 
 import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
-import Cart from '../components/Home';
+import Cart from '../components/Cart';
 import Nav from '../components/Nav'
+import Shop from '../components/Shop'
+
 
 describe('testing shopping bag section', ()=>{
 
-    it('if quantity goes up', ()=>{
+    it('if quantity goes up', async()=>{
+        
         const onClickMock = jest.fn()
+
         const bagItemsMock = [{
             name: 'Mochito',
             src: './logo.png',
@@ -18,24 +22,36 @@ describe('testing shopping bag section', ()=>{
             id: 1
           }]
 
+
+       const onFakeClick = jest.fn()
+      
+       render(
+        <BrowserRouter>
+            <Shop addToBag={onClickMock} cards={bagItemsMock} />
+        </BrowserRouter>
+        )
+
         
         render(
             <BrowserRouter>
-                <Nav toggleCart={onClickMock} bagItems={bagItemsMock} />
+                <Nav toggleCart={onClickMock} bagItems={bagItemsMock}  />
             </BrowserRouter>
             )
 
         render(
         <BrowserRouter>
-            <Cart bagItems={bagItemsMock} decrementQuantity={onClickMock} />
+            <Cart  incrementQuantity={onFakeClick} bagItems={bagItemsMock} />
         </BrowserRouter>
         )
        
         
         const incrementBtn =  screen.getByTestId('increment')
+
         userEvent.click(incrementBtn)
-          
-        waitFor(()=>expect(screen.getByTestId('quantity').textContent).toMatch('2'))
+       
+        expect(onFakeClick).toHaveBeenCalledTimes(1)
+
+         expect(screen.getByTestId('quantity').textContent).toMatch('1')
 
     })
 

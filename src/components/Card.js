@@ -5,18 +5,19 @@ import { Link } from 'react-router-dom';
 export default function Card({id, src, name, price, addToBag}){
     const [hover, setHover] = React.useState(false)
 
-    function toggleHover(){
-
+    function toggleHover(event){
+        event.stopPropagation()
+ 
         setHover(true)
     }
 
-    function toggleFalse(){
+    function toggleFalse(event){
+        event.stopPropagation()
+        
         setHover(false)
     }
             
-const styles={
-    backgroundColor: "black"
-}
+
 
 
 return (
@@ -25,7 +26,7 @@ return (
   
     className="card">
         <Link to={`/shop/${id}`}>
-        <img style={styles}  onMouseEnter={toggleHover} onMouseLeave={toggleFalse}  src={src} alt='cocktail'/> 
+        <img onMouseEnter={toggleHover} onMouseLeave={toggleFalse}   src={src} alt='cocktail'/> 
             
         <div className={`text ${hover ? 'active' : ''}`} >
             <h2>Click to see more!</h2>

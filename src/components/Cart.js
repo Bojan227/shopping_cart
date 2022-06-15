@@ -16,9 +16,9 @@ export default function Cart({bagItems, toggleCart, decrementQuantity, increment
                 <div className='product-info'>
                     <h3>{item.name}</h3>
                     <div className='add--more'>
-                        <button type='button'  onClick={()=>decrementQuantity(item.id)}>-</button>
-                        <h3 >{item.quantity}</h3>
-                        <button type='button'  onClick={()=>incrementQuantity(item.id)}>+</button>    
+                        <button type='button' onClick={()=>decrementQuantity(item.id)}>-</button>
+                        <h3 data-testid="quantity">{item.quantity}</h3>
+                        <button data-testid='increment' type='button'  onClick={()=>incrementQuantity(item.id)}>+</button>    
                     </div>
                     <h3 className='price'>$ {item.price * item.quantity}</h3>
                 </div>

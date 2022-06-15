@@ -7,7 +7,6 @@ import { useTransition, animated } from 'react-spring';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Shop from './components/Shop';
-
 import ProductInfo from './components/ProductInfo';
 import Cart from './components/Cart';
 
