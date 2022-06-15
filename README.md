@@ -1,6 +1,6 @@
 #Shopping Cart
 
-**Link to project:**
+**Link to project:** https://bojan227.github.io/shop
 
 ![alt tag](shop-cart.png)
 
