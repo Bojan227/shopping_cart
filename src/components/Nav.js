@@ -8,7 +8,7 @@ export default function Nav({toggleCart, bagItems}){
 
         <nav>
             <ul>
-                <Link to='/'>
+                <Link to='/shopping_cart'>
                     <li>Home</li>
                 </Link>
 

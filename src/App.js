@@ -91,7 +91,7 @@ function addToBag(id){
       <BrowserRouter>
         <Nav toggleCart={toggleCart} bagItems={bagItems} />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/shopping_cart' element={<Home />} />
           <Route path='/shop' element={<Shop cards={cards} addToBag={addToBag} />} />
           <Route path='/shop/:id' element={<ProductInfo cards={cards} addToBag={addToBag} />} />
 

@@ -9,13 +9,16 @@
 }
 body {
   position: relative;
+  width: 100%;
 }
 
 nav {
   background: linear-gradient(to right, #283048, #859398);
   color: white;
   position: sticky;
+  width: 100%;
   top: 0;
+  z-index: 1000;
 }
 
 ul {
@@ -50,7 +53,8 @@ li {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  min-height: 90vh;
+  min-height: 100vh;
+  width: 100%;
   background: linear-gradient(to bottom, #007991, #78ffd6);
 }
 .cocktail-section {
@@ -150,6 +154,7 @@ div.cocktail-section > :nth-child(3) {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  z-index: 10000;
 }
 .cart-container-ani {
   position: absolute;
@@ -164,7 +169,7 @@ div.cocktail-section > :nth-child(3) {
 .cart {
   background-color: hsl(0 0% 100% / 0.7);
   backdrop-filter: blur(1rem);
-  width: 30%;
+  width: 40%;
   padding: 45px;
   display: flex;
   flex-direction: column;
@@ -218,4 +223,29 @@ div.cocktail-section > :nth-child(3) {
   border: 0;
   cursor: pointer;
   padding: 5px 10px;
+}
+
+@media screen and (max-width: 1350px) {
+  .cocktail-section > img {
+    width: 250px;
+  }
+  .cart {
+    justify-content: flex-start;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .cocktail-section {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .cocktail-section > img {
+    width: 250px;
+  }
+  .cart {
+    width: 80%;
+  }
 }
