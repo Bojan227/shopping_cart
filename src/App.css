@@ -1,251 +1,251 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,500&display=swap');
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 body {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 nav {
-  background: linear-gradient(to right, #283048, #859398);
-  color: white;
-  position: sticky;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+    background: linear-gradient(to right, #283048, #859398);
+    color: white;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 20px;
-  padding: 30px;
-  position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    position: relative;
 }
 ul > * {
-  cursor: pointer;
+    cursor: pointer;
 }
 .bag-length {
-  position: absolute;
-  right: 19%;
-  border-radius: 30px;
-  padding: 5px;
-  background-color: white;
-  color: black;
-  font-size: 1.5rem;
+    position: absolute;
+    right: 19%;
+    border-radius: 30px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
 }
 
 li {
-  color: white;
-  list-style: none;
-  font-size: 2rem;
+    color: white;
+    list-style: none;
+    font-size: 2rem;
 }
 
 .home-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  background: linear-gradient(to bottom, #007991, #78ffd6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #007991, #78ffd6);
 }
 .cocktail-section {
-  display: flex;
-  gap: 105px;
-  padding: 55px;
+    display: flex;
+    gap: 105px;
+    padding: 55px;
 }
 .cocktail-section > img {
-  width: 350px;
+    width: 350px;
 }
 
 div.cocktail-section > :nth-child(1) {
-  transform: rotate(-10deg);
+    transform: rotate(-10deg);
 }
 div.cocktail-section > :nth-child(3) {
-  transform: rotate(10deg);
+    transform: rotate(10deg);
 }
 .info-section {
-  justify-self: baseline;
+    justify-self: baseline;
 }
 
 .shop--btn {
-  padding: 15px 25px;
-  background-color: inherit;
-  cursor: pointer;
+    padding: 15px 25px;
+    background-color: inherit;
+    cursor: pointer;
 }
 .shop--btn:hover {
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .card > a > img {
-  width: 250px;
-  height: 250px;
+    width: 250px;
+    height: 250px;
 }
 
 .card {
-  position: relative;
+    position: relative;
 }
 
 .text {
-  display: none;
+    display: none;
 }
 .text.active {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  text-align: center;
-  color: white;
-  width: 90%;
-  height: 50%;
-  padding: 10px;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    text-align: center;
+    color: white;
+    width: 90%;
+    height: 50%;
+    padding: 10px;
 }
 .text.active > h2 {
-  background-color: hsl(0 0% 1% / 0.4);
+    background-color: hsl(0 0% 1% / 0.4);
 }
 .active {
-  display: block;
+    display: block;
 }
 
 .card > * {
-  margin: 5px 0px;
+    margin: 5px 0px;
 }
 .card > button {
-  width: 100%;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 8px;
-  border: 0;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 0;
 }
 .card > button:hover {
-  background-color: inherit;
-  border: 1px solid black;
+    background-color: inherit;
+    border: 1px solid black;
 }
 
 .cards-section {
-  display: grid;
-  min-height: 100vh;
-  justify-items: center;
-  align-items: center;
-  padding: 30px;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  background: linear-gradient(to bottom, #6d6027, #d3cbb8);
+    display: grid;
+    min-height: 100vh;
+    justify-items: center;
+    align-items: center;
+    padding: 30px;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    background: linear-gradient(to bottom, #6d6027, #d3cbb8);
 }
 .img-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 .cart-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: hsl(0 0% 1% / 0.4);
-  min-height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  z-index: 10000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: hsl(0 0% 1% / 0.4);
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10000;
 }
 .cart-container-ani {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: hsl(0 0% 1% / 0.4);
-  min-height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: hsl(0 0% 1% / 0.4);
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 .cart {
-  background-color: hsl(0 0% 100% / 0.7);
-  backdrop-filter: blur(1rem);
-  width: 40%;
-  padding: 45px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 40px;
+    background-color: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(1rem);
+    width: 40%;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
 }
 .header-bag {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
 }
 .header-bag > button {
-  background-color: inherit;
-  border: 0;
-  font-size: 2rem;
-  cursor: pointer;
+    background-color: inherit;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
 }
 .product-info {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 .products {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 .product {
-  display: flex;
-  gap: 30px;
-  align-items: center;
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 .order-btn > button {
-  width: 100%;
-  padding: 20px 30px;
-  cursor: pointer;
-  border-radius: 8px;
-  border: 0;
-  margin-top: 20px;
+    width: 100%;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 0;
+    margin-top: 20px;
 }
 .order-btn > button:hover {
-  background-color: inherit;
-  border: 2px solid black;
+    background-color: inherit;
+    border: 2px solid black;
 }
 .add--more {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 .add--more > button {
-  border-radius: 5px;
-  border: 0;
-  cursor: pointer;
-  padding: 5px 10px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    padding: 5px 10px;
 }
 
 @media screen and (max-width: 1350px) {
-  .cocktail-section > img {
-    width: 250px;
-  }
-  .cart {
-    justify-content: flex-start;
-    width: 50%;
-  }
+    .cocktail-section > img {
+        width: 250px;
+    }
+    .cart {
+        justify-content: flex-start;
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 1100px) {
-  .cocktail-section {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  .cocktail-section > img {
-    width: 250px;
-  }
-  .cart {
-    width: 80%;
-  }
+    .cocktail-section {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .cocktail-section > img {
+        width: 250px;
+    }
+    .cart {
+        width: 80%;
+    }
 }
